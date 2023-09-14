@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CustomFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="60dp"
+        tools:context=".GirisFragment">
+
+        <LinearLayout
+            android:layout_width="305dp"
+            android:layout_height="454dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fullNameCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Yaşınızı giriniz"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_height"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Boyunuzu giriniz"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_weight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Kilonuzu giriniz"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_water"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Günde kaç litre su içiyorsunuz ?"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_steps"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Günde kaç bin adım atıyorsunuz?"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="306dp"
+            android:layout_height="94dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_goFinal"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:text="Sonraki sayfa" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

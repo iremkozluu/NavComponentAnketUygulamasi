@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ikozlu.anketapp.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/loginToPersonalInfo"
+            app:destination="@id/personalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalInfoFragment"
+        android:name="com.ikozlu.anketapp.ui.PersonalInfoFragment"
+        android:label="fragment_personal_info"
+        tools:layout="@layout/fragment_personal_info" >
+        <action
+            android:id="@+id/personalInfoToCustom"
+            app:destination="@id/customFragment"
+            app:popUpTo="@id/personalInfoFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="nameSurname"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/customFragment"
+        android:name="com.ikozlu.anketapp.ui.CustomFragment"
+        android:label="fragment_custom"
+        tools:layout="@layout/fragment_custom" >
+        <action
+            android:id="@+id/customToResults"
+            app:destination="@id/resultsFragment"
+            app:popUpTo="@id/customFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="PersonalInfo"
+            app:argType="com.ikozlu.anketapp.model.UsersModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.ikozlu.anketapp.ui.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+        <argument
+            android:name="results"
+            app:argType="com.ikozlu.anketapp.model.ResultModel" />
+    </fragment>
+</navigation>
